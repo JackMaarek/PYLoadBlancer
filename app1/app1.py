@@ -9,10 +9,10 @@ import time
 message = [b"Hello World"]
 
 SERVERIP = '127.0.0.1'
-HBPORT = 65437
+HBPORT = 65432
 BEATWAIT = 10             # number of seconds between heartbeats
 
-
+sel = selectors.DefaultSelector()
 
 def start_connections(host, port, num_conns):
     server_addr = (host, port)

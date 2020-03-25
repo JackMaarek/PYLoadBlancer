@@ -5,7 +5,6 @@ import socket
 import selectors
 import types
 from time import ctime, time
-from .HeartBeat import main
 
 sel = selectors.DefaultSelector()
 
@@ -58,7 +57,6 @@ print("listening on", (host, port))
 lsock.setblocking(False)
 sel.register(lsock, selectors.EVENT_READ, data=None)
 
-main()
 
 try:
     while True:
